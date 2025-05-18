@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{AE73EBF0-0103-0295-15B6-F157C9A75018}|">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="vr-hideandseek-screencheat" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Cardboard" expanded="True">
+                <Node name="Scripts" expanded="True" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a0b1c1eb-7461-4087-b7d0-d52340265e3c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
