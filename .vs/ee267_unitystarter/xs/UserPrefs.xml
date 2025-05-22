@@ -4,26 +4,24 @@
       <File FileName="Assets/Scripts/ReadUSB.cs" Line="19" Column="55" />
       <File FileName="Assets/Cardboard/Scripts/CardboardProfile.cs" />
       <File FileName="Assets/Cardboard/Legacy/Scripts/CardboardOnGUIWindow.cs" />
-      <File FileName="Assets/Cardboard/Legacy/Scripts/CardboardOnGUIMouse.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="9" Column="27" />
-      <File FileName="Assets/Scripts/Weapon.cs" Line="10" Column="37" />
-      <File FileName="Assets/Scripts/Bullet.cs" Line="24" Column="33" />
+      <File FileName="Assets/Cardboard/Legacy/Scripts/CardboardOnGUIMouse.cs" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" />
+      <File FileName="Assets/Scripts/Weapon.cs" />
+      <File FileName="Assets/Scripts/Bullet.cs" />
       <File FileName="Assets/Scripts/Enemy.cs" Line="40" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ee267_unitystarter" expanded="True">
-            <Node name="Assets" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
               <Node name="Cardboard" expanded="True">
                 <Node name="Legacy" expanded="True">
                   <Node name="Scripts" expanded="True" />
                 </Node>
                 <Node name="Scripts" expanded="True" />
               </Node>
-              <Node name="Scripts" expanded="True">
-                <Node name="Enemy.cs" selected="True" />
-              </Node>
+              <Node name="Scripts" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -32,7 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fb3ee6ec-1194-4c52-8d43-14ed859ac439" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="442321db-ed40-4ca8-afd9-3063df0aef2c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

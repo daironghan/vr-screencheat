@@ -6,6 +6,11 @@ public class Enemy : MonoBehaviour
 {
     public Terrain terrain;
     public float edgeMargin = 10f;
+    public float moveSpeed = 1f;
+    public float turnSpeed = 120f;
+    public float obstacleDetectionDistance = 2f;
+
+    //private Vector3 moveDirection;
 
     // Start is called before the first frame update
     void Start()
@@ -37,11 +42,43 @@ public class Enemy : MonoBehaviour
 
         // Set final spawn position above ground
         transform.position = new Vector3(x, y + heightOffset, z);
+
+        // Set initial random move direction
+        //moveDirection = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
+        Renderer rend = GetComponent<Renderer>();
+        if (rend != null)
+        {
+            rend.enabled = false;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
+    }
+
+    void Move()
+    {
+        // Check for obstacle
+        if (Physics.Raycast(transform.position, transform.forward, obstacleDetectionDistance))
+        {
+            // Pick a new random direction when an obstacle is detected
+            float randomAngle = Random.Range(90f, 180f);
+            transform.Rotate(0, randomAngle, 0);
+        }
+
+        // Move forward
+        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+
+        // Stay on terrain
+        Vector3 pos = transform.position;
+        float y = terrain.SampleHeight(pos) + terrain.GetPosition().y;
+
+        // Adjust Y to terrain and keep same XZ
+        Collider col = GetComponent<Collider>();
+        float heightOffset = col != null ? col.bounds.extents.y : 1f;
+        transform.position = new Vector3(pos.x, y + heightOffset, pos.z);
     }
 }

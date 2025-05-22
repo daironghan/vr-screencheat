@@ -26,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        Renderer rend = GetComponent<Renderer>();
+        if (rend != null)
+        {
+            rend.enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -51,10 +57,10 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
 
         // Check if player can jump
-        if(Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
+        //if(Input.GetButtonDown("Jump") && isGrounded)
+        //{
+        //    velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        //}
 
         // Falling down
         velocity.y += gravity * Time.deltaTime;
