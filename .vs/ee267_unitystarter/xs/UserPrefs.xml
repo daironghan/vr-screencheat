@@ -1,27 +1,30 @@
 ﻿<Properties StartupConfiguration="{AE73EBF0-0103-0295-15B6-F157C9A75018}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainMenu.cs">
     <Files>
       <File FileName="Assets/Scripts/ReadUSB.cs" Line="19" Column="55" />
-      <File FileName="Assets/Cardboard/Scripts/CardboardProfile.cs" />
-      <File FileName="Assets/Cardboard/Legacy/Scripts/CardboardOnGUIWindow.cs" />
+      <File FileName="Assets/Cardboard/Scripts/CardboardProfile.cs" Line="1" Column="1" />
+      <File FileName="Assets/Cardboard/Legacy/Scripts/CardboardOnGUIWindow.cs" Line="1" Column="1" />
       <File FileName="Assets/Cardboard/Legacy/Scripts/CardboardOnGUIMouse.cs" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" />
-      <File FileName="Assets/Scripts/Weapon.cs" />
-      <File FileName="Assets/Scripts/Bullet.cs" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="40" Column="6" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="27" Column="6" />
+      <File FileName="Assets/Scripts/Weapon.cs" Line="16" Column="9" />
+      <File FileName="Assets/Scripts/Bullet.cs" Line="24" Column="33" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="49" Column="26" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ee267_unitystarter" expanded="True">
-            <Node name="Assets" expanded="True" selected="True">
+            <Node name="Assets" expanded="True">
               <Node name="Cardboard" expanded="True">
                 <Node name="Legacy" expanded="True">
                   <Node name="Scripts" expanded="True" />
                 </Node>
                 <Node name="Scripts" expanded="True" />
               </Node>
-              <Node name="Scripts" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="MainMenu.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

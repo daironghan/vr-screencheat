@@ -45,6 +45,8 @@ public class Enemy : MonoBehaviour
 
         // Set initial random move direction
         //moveDirection = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
+
+        // Make invisible
         Renderer rend = GetComponent<Renderer>();
         if (rend != null)
         {

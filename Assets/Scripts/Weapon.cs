@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Make invisible
         Renderer rend = GetComponent<Renderer>();
         if (rend != null)
         {

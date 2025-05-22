@@ -26,12 +26,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-
-        Renderer rend = GetComponent<Renderer>();
-        if (rend != null)
-        {
-            rend.enabled = false;
-        }
     }
 
     // Update is called once per frame
