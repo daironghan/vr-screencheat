@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     public float turnSpeed = 120f;
     public float obstacleDetectionDistance = 2f;
 
+    // End menu
+    public GameObject winCanvas;
     //private Vector3 moveDirection;
 
     // Start is called before the first frame update
@@ -82,5 +84,27 @@ public class Enemy : MonoBehaviour
         Collider col = GetComponent<Collider>();
         float heightOffset = col != null ? col.bounds.extents.y : 1f;
         transform.position = new Vector3(pos.x, y + heightOffset, pos.z);
+    }
+
+    public void OnHit()
+    {
+        Debug.Log("Enemy was hit!");
+
+        if (winCanvas != null)
+        {
+            winCanvas.SetActive(true);
+
+            Weapon weapon = FindObjectOfType<Weapon>();
+            if (weapon != null)
+            {
+                weapon.SetGameEnded(true);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("winCanvas not assigned!");
+        }
+
+        Destroy(gameObject); // if you want to remove the enemy after hit
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Weapon : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Weapon : MonoBehaviour
     public Transform bulletSpawn;
     public float bulletVelocity = 20;
     public float bulletPrefabLifeTime = 3f;
+
+    private bool gameEnded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +31,15 @@ public class Weapon : MonoBehaviour
         //if(Input.GetKeyDown(KeyCode.Mouse0))
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            FireWeapon();
+            if (gameEnded)
+            {
+                // Return to main menu
+                SceneManager.LoadScene("MainMenu"); // or use build index 0
+            }
+            else
+            {
+                FireWeapon();
+            }
         }
     }
 
@@ -48,4 +59,8 @@ public class Weapon : MonoBehaviour
         Destroy(bullet);
     }
 
+    public void SetGameEnded(bool hasEnded)
+    {
+        gameEnded = hasEnded;
+    }
 }
