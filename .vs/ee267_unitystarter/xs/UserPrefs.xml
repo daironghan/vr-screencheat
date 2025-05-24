@@ -1,16 +1,18 @@
 ﻿<Properties StartupConfiguration="{AE73EBF0-0103-0295-15B6-F157C9A75018}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Timer.cs">
     <Files>
       <File FileName="Assets/Scripts/ReadUSB.cs" Line="19" Column="55" />
       <File FileName="Assets/Cardboard/Scripts/CardboardProfile.cs" Line="1" Column="1" />
       <File FileName="Assets/Cardboard/Legacy/Scripts/CardboardOnGUIWindow.cs" Line="1" Column="1" />
       <File FileName="Assets/Cardboard/Legacy/Scripts/CardboardOnGUIMouse.cs" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="27" Column="6" />
-      <File FileName="Assets/Scripts/Weapon.cs" Line="16" Column="9" />
-      <File FileName="Assets/Scripts/Bullet.cs" Line="19" Column="14" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="49" Column="26" />
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="14" Column="6" />
-      <File FileName="Assets/Scripts/EndMenu.cs" Line="7" Column="5" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="58" Column="1" />
+      <File FileName="Assets/Scripts/Weapon.cs" Line="4" Column="35" />
+      <File FileName="Assets/Scripts/Bullet.cs" Line="20" Column="10" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="101" Column="14" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="16" Column="47" />
+      <File FileName="Assets/Scripts/EndMenu.cs" Line="10" Column="44" />
+      <File FileName="Assets/Scripts/MenuNavigation.cs" Line="32" Column="10" />
+      <File FileName="Assets/Scripts/Timer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,7 +26,7 @@
                 <Node name="Scripts" expanded="True" />
               </Node>
               <Node name="Scripts" expanded="True">
-                <Node name="MainMenu.cs" selected="True" />
+                <Node name="Timer.cs" selected="True" />
               </Node>
             </Node>
           </Node>
