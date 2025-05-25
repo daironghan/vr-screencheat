@@ -9,7 +9,11 @@ public class Timer : MonoBehaviour
     float currentTime = 0f;
     float startingTime = 60f;
 
-    [SerializeField] TMP_Text countdownText; 
+    [SerializeField] TMP_Text countdownText;
+    // End menu
+    public GameObject winCanvas;
+
+    private bool isRunning = true;
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +24,34 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
+        if (!isRunning) return;
+
+        currentTime -= Time.deltaTime;
+        currentTime = Mathf.Max(currentTime, 0); // Ensure it doesn’t go below 0
         countdownText.text = currentTime.ToString("0");
-        if(currentTime <= 0)
+
+        if (currentTime <= 0)
         {
-            currentTime = 0;
+            // Show win canvas
+            if (winCanvas != null)
+            {
+                winCanvas.SetActive(true);
+            }
+
+            // End game logic
+            Weapon weapon = FindObjectOfType<Weapon>();
+            if (weapon != null)
+            {
+                weapon.SetGameEnded(true);
+            }
+
+            isRunning = false;
         }
+    }
+
+
+    public void StopTimer()
+    {
+        isRunning = false;
     }
 }

@@ -2895,7 +2895,7 @@ GameObject:
   - component: {fileID: 1351044422}
   - component: {fileID: 1351044421}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: EndText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2938,7 +2938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Victory !!!
+  m_text: Fail :(
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f3729e5f10fd945b7a070bc78f17a56d, type: 2}
   m_sharedMaterial: {fileID: 21348746566213486, guid: f3729e5f10fd945b7a070bc78f17a56d,
@@ -3008,7 +3008,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0.07971811}
   m_textInfo:
     textComponent: {fileID: 1351044421}
-    characterCount: 11
+    characterCount: 7
     spriteCount: 0
     spaceCount: 1
     wordCount: 1
@@ -3679,7 +3679,7 @@ GameObject:
   - component: {fileID: 1848861192}
   - component: {fileID: 1848861195}
   m_Layer: 5
-  m_Name: TimerCanvas
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3778,6 +3778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownText: {fileID: 728976468}
+  winCanvas: {fileID: 688522669}
 --- !u!1 &1859251812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 8fc27970363574772824c4eb27168dd2,
@@ -3921,6 +3922,7 @@ MonoBehaviour:
   turnSpeed: 120
   obstacleDetectionDistance: 2
   winCanvas: {fileID: 688522669}
+  endText: {fileID: 1351044421}
 --- !u!1001 &1881059247
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class Enemy : MonoBehaviour
     public GameObject winCanvas;
     //private Vector3 moveDirection;
 
+    [SerializeField] TMP_Text endText;
+
+    bool isEasyMode = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +26,9 @@ public class Enemy : MonoBehaviour
         {
             terrain = Terrain.activeTerrain;
         }
+
+        string difficulty = PlayerPrefs.GetString("Difficulty", "Hard");
+        isEasyMode = (difficulty == "Easy");
 
         // Get terrain origin and size
         Vector3 terrainPos = terrain.GetPosition();
@@ -60,7 +68,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (!isEasyMode)
+        {
+            Move();
+        }
     }
 
     void Move()
@@ -93,11 +104,18 @@ public class Enemy : MonoBehaviour
         if (winCanvas != null)
         {
             winCanvas.SetActive(true);
-
+            endText.text = "Victory !!!";
+            // So that space can alter to return instead of fire weapon
             Weapon weapon = FindObjectOfType<Weapon>();
             if (weapon != null)
             {
                 weapon.SetGameEnded(true);
+            }
+
+            Timer timer = FindObjectOfType<Timer>();
+            if (timer != null)
+            {
+                timer.StopTimer();
             }
         }
         else
