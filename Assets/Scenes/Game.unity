@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 69348339}
   - component: {fileID: 69348338}
   - component: {fileID: 69348337}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Return
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 146568268}
   - component: {fileID: 146568270}
   - component: {fileID: 146568269}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 430868129}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1330,7 +1330,7 @@ GameObject:
   - component: {fileID: 688522672}
   - component: {fileID: 688522671}
   - component: {fileID: 688522674}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EndCanvas
   m_TagString: EndMenu
   m_Icon: {fileID: 0}
@@ -1440,7 +1440,7 @@ GameObject:
   - component: {fileID: 728976467}
   - component: {fileID: 728976469}
   - component: {fileID: 728976468}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: TimerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1736,7 +1736,7 @@ GameObject:
   - component: {fileID: 822528667}
   - component: {fileID: 822528669}
   - component: {fileID: 822528668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2201,7 +2201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004397251}
   m_LocalRotation: {x: -0, y: 0.9996153, z: -0, w: 0.02773851}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1874414684}
@@ -2245,7 +2245,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: c243de750c72a444ab883118c9a732a3, type: 2}
   m_TargetDisplay: 0
@@ -2435,7 +2435,7 @@ GameObject:
   - component: {fileID: 1178463425}
   - component: {fileID: 1178463424}
   - component: {fileID: 1178463423}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SubView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2478,7 +2478,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178463421}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -2894,7 +2894,7 @@ GameObject:
   - component: {fileID: 1351044420}
   - component: {fileID: 1351044422}
   - component: {fileID: 1351044421}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EndText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2938,7 +2938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fail :(
+  m_text: "Time\u2019s Up :("
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f3729e5f10fd945b7a070bc78f17a56d, type: 2}
   m_sharedMaterial: {fileID: 21348746566213486, guid: f3729e5f10fd945b7a070bc78f17a56d,
@@ -3488,7 +3488,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614442908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -0.02, z: 0.453}
+  m_LocalPosition: {x: -0.02, y: -0.02, z: -0.313}
   m_LocalScale: {x: 6.6666665, y: 6.6666665, z: 1}
   m_Children: []
   m_Father: {fileID: 858576571}
@@ -3678,7 +3678,7 @@ GameObject:
   - component: {fileID: 1848861193}
   - component: {fileID: 1848861192}
   - component: {fileID: 1848861195}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

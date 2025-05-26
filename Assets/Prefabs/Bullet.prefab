@@ -123,7 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db43fcc4d19674f719ab2df288cab013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winCanvas: {fileID: 0}
 --- !u!96 &96271246163464934
 TrailRenderer:
   serializedVersion: 2
@@ -170,7 +169,7 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 0.014152527
         value: 0.26136088
         inSlope: 0
         outSlope: 0
@@ -179,8 +178,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.26968062
-        value: 0.0078125
+        time: 0.14231932
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0

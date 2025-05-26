@@ -122,7 +122,5 @@ public class Enemy : MonoBehaviour
         {
             Debug.LogWarning("winCanvas not assigned!");
         }
-
-        Destroy(gameObject); // if you want to remove the enemy after hit
     }
 }
