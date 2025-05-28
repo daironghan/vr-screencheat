@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f * 2;
     public float jumpHeight = 1f;
 
+    public float rotationSpeed = 100f;
+
     // For jumping
     public Transform groundCheck; 
     public float groundDistance = 0.4f;
@@ -39,11 +41,12 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        // Get inputs
+
+        //Get inputs
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        // Create moving vector
+        //Create moving vector
         // Right - red, forward - blue
         Vector3 move = transform.right * x + transform.forward * z;
 

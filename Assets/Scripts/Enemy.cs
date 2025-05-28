@@ -53,6 +53,14 @@ public class Enemy : MonoBehaviour
         // Set final spawn position above ground
         transform.position = new Vector3(x, y + heightOffset, z);
 
+
+        // Check for obstacle
+        if (Physics.Raycast(transform.position, transform.forward, obstacleDetectionDistance))
+        {
+            // Pick a new random direction when an obstacle is detected
+            float randomAngle = Random.Range(90f, 180f);
+            transform.Rotate(0, randomAngle, 0);
+        }
         // Set initial random move direction
         //moveDirection = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
 

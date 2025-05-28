@@ -1,18 +1,20 @@
 ﻿<Properties StartupConfiguration="{AE73EBF0-0103-0295-15B6-F157C9A75018}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Timer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Cardboard/Scripts/StereoController.cs">
     <Files>
       <File FileName="Assets/Scripts/ReadUSB.cs" Line="19" Column="55" />
       <File FileName="Assets/Cardboard/Scripts/CardboardProfile.cs" Line="1" Column="1" />
       <File FileName="Assets/Cardboard/Legacy/Scripts/CardboardOnGUIWindow.cs" Line="1" Column="1" />
       <File FileName="Assets/Cardboard/Legacy/Scripts/CardboardOnGUIMouse.cs" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="58" Column="1" />
-      <File FileName="Assets/Scripts/Weapon.cs" Line="4" Column="35" />
-      <File FileName="Assets/Scripts/Bullet.cs" Line="20" Column="10" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="101" Column="14" />
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="16" Column="47" />
-      <File FileName="Assets/Scripts/EndMenu.cs" Line="10" Column="44" />
-      <File FileName="Assets/Scripts/MenuNavigation.cs" Line="32" Column="10" />
-      <File FileName="Assets/Scripts/Timer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="34" Column="24" />
+      <File FileName="Assets/Scripts/Weapon.cs" Line="42" Column="14" />
+      <File FileName="Assets/Scripts/Bullet.cs" Line="9" Column="54" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="39" Column="64" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="22" Column="78" />
+      <File FileName="Assets/Scripts/EndMenu.cs" Line="14" Column="1" />
+      <File FileName="Assets/Scripts/MenuNavigation.cs" Line="4" Column="22" />
+      <File FileName="Assets/Scripts/Timer.cs" Line="51" Column="1" />
+      <File FileName="Assets/Cardboard/Scripts/Cardboard.cs" Line="1" Column="1" />
+      <File FileName="Assets/Cardboard/Scripts/StereoController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,11 +25,11 @@
                 <Node name="Legacy" expanded="True">
                   <Node name="Scripts" expanded="True" />
                 </Node>
-                <Node name="Scripts" expanded="True" />
+                <Node name="Scripts" expanded="True">
+                  <Node name="StereoController.cs" selected="True" />
+                </Node>
               </Node>
-              <Node name="Scripts" expanded="True">
-                <Node name="Timer.cs" selected="True" />
-              </Node>
+              <Node name="Scripts" expanded="True" />
             </Node>
           </Node>
         </State>
