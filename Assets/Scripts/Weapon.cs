@@ -26,6 +26,10 @@ public class Weapon : MonoBehaviour
         {
             rend.enabled = false;
         }
+        if (cooldownImage != null)
+        {
+            cooldownImage.fillAmount = 0f;
+        }
     }
 
     // Update is called once per frame

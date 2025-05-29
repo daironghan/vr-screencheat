@@ -84,15 +84,42 @@ public class Enemy : MonoBehaviour
 
     void Move()
     {
+        // //Check for obstacle
+        //if (Physics.Raycast(transform.position, transform.forward, obstacleDetectionDistance))
+        //{
+        //    // Pick a new random direction when an obstacle is detected
+        //    float randomAngle = Random.Range(90f, 180f);
+        //    transform.Rotate(0, randomAngle, 0);
+        //}
+
+        //// Move forward
+        //transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+
+        //// Stay on terrain
+        //Vector3 pos = transform.position;
+        //float y = terrain.SampleHeight(pos) + terrain.GetPosition().y;
+
+        //// Adjust Y to terrain and keep same XZ
+        //Collider col = GetComponent<Collider>();
+        //float heightOffset = col != null ? col.bounds.extents.y : 1f;
+        //transform.position = new Vector3(pos.x, y + heightOffset, pos.z);
+
+        Vector3 moveDirection = transform.forward;
+
         // Check for obstacle
-        if (Physics.Raycast(transform.position, transform.forward, obstacleDetectionDistance))
+        if (Physics.Raycast(transform.position, moveDirection, obstacleDetectionDistance))
         {
             // Pick a new random direction when an obstacle is detected
             float randomAngle = Random.Range(90f, 180f);
             transform.Rotate(0, randomAngle, 0);
+            moveDirection = Quaternion.Euler(0, randomAngle, 0) * moveDirection;
         }
 
-        // Move forward
+        // Smoothly rotate toward moveDirection
+        Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+
+        // Move forward in facing direction
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 
         // Stay on terrain
