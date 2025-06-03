@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float rotationSpeed = 100f;
 
-    // For jumping
+    // For jumping, disabled
     public Transform groundCheck; 
     public float groundDistance = 0.4f;
     public LayerMask groundMask; // Ground layer
@@ -24,13 +24,11 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 lastPosition = new Vector3(0f, 0f, 0f);
 
-    // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Ground check
@@ -41,19 +39,18 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-
-        //Get inputs
+        // Get inputs
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        //Create moving vector
+        // Create moving vector
         // Right - red, forward - blue
         Vector3 move = transform.right * x + transform.forward * z;
 
         // Moving player
         controller.Move(move * speed * Time.deltaTime);
 
-        // Check if player can jump
+        // Check if player can jump, disabled
         //if(Input.GetButtonDown("Jump") && isGrounded)
         //{
         //    velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);

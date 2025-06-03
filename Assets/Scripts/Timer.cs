@@ -10,18 +10,17 @@ public class Timer : MonoBehaviour
     float startingTime = 60f;
 
     [SerializeField] TMP_Text countdownText;
+    
     // End menu
     public GameObject winCanvas;
 
     private bool isRunning = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentTime = startingTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!isRunning) return;

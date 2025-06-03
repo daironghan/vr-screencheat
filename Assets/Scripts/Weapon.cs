@@ -17,7 +17,6 @@ public class Weapon : MonoBehaviour
     private bool canFire = true;
     private bool gameEnded = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         // Make invisible
@@ -32,17 +31,14 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Left mouse click
-        //if(Input.GetKeyDown(KeyCode.Mouse0))
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (gameEnded)
             {
                 // Return to main menu
-                SceneManager.LoadScene("MainMenu"); // or use build index 0
+                SceneManager.LoadScene("MainMenu");
             }
             else if (canFire)
             {
@@ -85,7 +81,8 @@ public class Weapon : MonoBehaviour
     }
 
     public void SetGameEnded(bool hasEnded)
-    {
+    {   
+        // To disable weapon
         gameEnded = hasEnded;
     }
 }

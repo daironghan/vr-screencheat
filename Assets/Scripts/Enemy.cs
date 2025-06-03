@@ -13,13 +13,11 @@ public class Enemy : MonoBehaviour
 
     // End menu
     public GameObject winCanvas;
-    //private Vector3 moveDirection;
 
     [SerializeField] TMP_Text endText;
 
     bool isEasyMode = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (terrain == null)
@@ -61,8 +59,6 @@ public class Enemy : MonoBehaviour
             float randomAngle = Random.Range(90f, 180f);
             transform.Rotate(0, randomAngle, 0);
         }
-        // Set initial random move direction
-        //moveDirection = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
 
         // Make invisible
         Renderer rend = GetComponent<Renderer>();
@@ -73,7 +69,6 @@ public class Enemy : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!isEasyMode)
@@ -84,42 +79,15 @@ public class Enemy : MonoBehaviour
 
     void Move()
     {
-        // //Check for obstacle
-        //if (Physics.Raycast(transform.position, transform.forward, obstacleDetectionDistance))
-        //{
-        //    // Pick a new random direction when an obstacle is detected
-        //    float randomAngle = Random.Range(90f, 180f);
-        //    transform.Rotate(0, randomAngle, 0);
-        //}
-
-        //// Move forward
-        //transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-
-        //// Stay on terrain
-        //Vector3 pos = transform.position;
-        //float y = terrain.SampleHeight(pos) + terrain.GetPosition().y;
-
-        //// Adjust Y to terrain and keep same XZ
-        //Collider col = GetComponent<Collider>();
-        //float heightOffset = col != null ? col.bounds.extents.y : 1f;
-        //transform.position = new Vector3(pos.x, y + heightOffset, pos.z);
-
-        Vector3 moveDirection = transform.forward;
-
         // Check for obstacle
-        if (Physics.Raycast(transform.position, moveDirection, obstacleDetectionDistance))
+        if (Physics.Raycast(transform.position, transform.forward, obstacleDetectionDistance))
         {
             // Pick a new random direction when an obstacle is detected
             float randomAngle = Random.Range(90f, 180f);
             transform.Rotate(0, randomAngle, 0);
-            moveDirection = Quaternion.Euler(0, randomAngle, 0) * moveDirection;
         }
 
-        // Smoothly rotate toward moveDirection
-        Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
-
-        // Move forward in facing direction
+        // Move forward
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 
         // Stay on terrain
